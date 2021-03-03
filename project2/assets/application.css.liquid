@@ -1,0 +1,194 @@
+/* Put your styles in this file. */
+/* Note: "@import" rules aren’t supported. */
+
+/* base */
+* {
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+html,
+body{
+    width: 100%;
+    margin: 0;
+    padding:0;
+    color:black;
+    line-height: 20px;
+}
+body{
+    font-size: 15px;
+    background-color: #f7f2ea;
+    background-image: url( '{{ "background.jpg" | asset_url }} ');
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding-top: 110px;
+}
+h1,h2,h3,h4,h5,h6,p,ul,ol{
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+a{
+    text-decoration: none;
+}
+
+ul,
+ol{
+    list-style-type: none;
+}
+/* stylesheets */
+h1,.h1
+h2,.h2{
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    font-weight: 700;
+    color:#333333;
+}
+h1,
+.h1{
+    font-size:50px;
+    line-height: 60px;
+}
+h2,
+.h2{
+    font-size: 30px;
+    line-height:40px;
+}
+h4,
+.h4{
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.075em;
+    color:#333333;
+}
+a{
+    color:#555555;
+}
+a:hover{
+    opacity: 0.75;
+}
+p{
+    color:#555555;
+}
+p a{
+    border-bottom:1px solid rgba(0,0,0,0.15) ;
+}
+p a:hover{
+    color:#000000
+}
+.text-link{
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.075em;
+    color:#000000;
+}
+
+
+/* utility classes */
+.wrapper{
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.grid{
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+.grid >*{
+    min-width: 0;
+    min-height:0;
+}
+.wrapper{
+    grid-template-columns: 1fr 1fr;
+}
+.valign-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.ta-center{
+    text-align: center;
+}
+
+/* header */
+.header-global{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height: 80px;
+    background-color: #EEE6DD;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding:20px 40px;
+    z-index: 1;
+}
+.header-global .shop-link{
+    order:-1;
+}
+.header-global .cart-close-text{
+    display: none;
+}
+
+/* footer */
+.footer-global{
+    background-color: #F4EDE6;
+    margin-top:40px; ;
+    border-top: 1px solid rgba(0,0,0,0.15);
+}
+.footer-global h4{
+    margin-bottom:20px;
+}
+.footer-top,
+.footer-bottom{
+    padding:40px;
+}
+.footer-top{
+    grid-template-columns: 2fr 1fr 1fr;
+}
+.footer-bottom{
+    border-top:1px solid rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding:20px 40px;
+}
+.social-links a{
+    display: inline-block;
+    
+}
+.social-links a:last-child{
+    margin-right: 10px;
+}
+/* Index styles */
+.index-top{
+    height:50vh;
+    min-height:400px;
+    padding-bottom: 40px;
+
+}
+.product-info-section{
+    padding: 40px;
+    background-color: #333333;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+.product-info-color{
+    color:#cccccc;
+}
+.product-info-color a{
+    color:white;
+}
+.product-info-color p{
+    color:#cccccc;
+}
+.product-title{
+    padding:20px 0;
+}
