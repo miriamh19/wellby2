@@ -8,7 +8,7 @@
 
     <div class="option-fieldset">
         {% for variant in product.variants %}
-          <input class="js-variant-radio" type="radio" name="id" id="variant-{{ forloop.index }}" value= "{{ variant.id }}"
+          <input class="variant-radio js-variant-radio" type="radio" name="id" id="variant-{{ forloop.index }}" value= "{{ variant.id }}"
             data-inventory-quantity="{{ variant.inventory_quantity}}" {% unless variant.available %}disabled{% endunless %}>
           <label for="variant-{{ forloop.index }}">{{variant.title}}</label>
     {% endfor %}
@@ -18,10 +18,10 @@
   <input type="hidden" name="id" value="{{ product.variants.first.id }}">
 {% endif %}
 
-<div class="option-row">
+<div class="option-row white">
   <label for="Quantity">{{ 'product.form.quantity' | t }}</label>
 
-<div class="option-fieldset">
+<div class="option-fieldset white">
     <div class="visually-hidden">
       <input type="number" class="js-q-field"  id="Quantity" name="quantity" value="1" min="1" {% if product.variants.size == 1 %}max="{{product.variants.first.inventory_quantity }}"{% endif %}> 
     <div>
